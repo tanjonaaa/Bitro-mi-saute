@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+    margin: 100px auto;
+    position: relative;
+}
+
+#player{
+    background-image: url(rabbit.png);
+    height: 70px;
+    width: 27px;
+    background-size: auto 70px;
+    position: relative;
+    top: 141px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#tree{
+    background-image: url(tree.png);
+    height: 70px;
+    width: 30px;
+    background-size: auto 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;    
+    left: 558px;
+    top: 75px;
+    animation: treeMove 1.2s infinite linear;
+}
+
+.jump{
+    animation: jump 0.3s linear;
+}
+
+#score{
+    position: absolute;
+    top: 0;
+    left: 520px;
+    height: 50px;
+    width: 80px;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+@keyframes jump {
+    0%{
+        top: 141px;
+    }
+
+    50%{
+        top: 30px;
+    }
+
+    100%{
+        top: 141px;
+    }
+}
+
+@keyframes treeMove{
+    0%{
+        left: 558px;
+    }
+
+    50%{
+        left: 300px;
+    }
+
+    100%{
+        left: 0;
+    }
+}
